@@ -234,7 +234,7 @@ rdpInputMouse(rdpPtr dev, int msg,
 static int
 rdpmouseControl(DeviceIntPtr device, int what)
 {
-    BYTE map[9];
+    BYTE map[9+1]; /* Indexed from 1 */
     DevicePtr pDev;
     Atom btn_labels[9];
     Atom axes_labels[2];
@@ -256,6 +256,7 @@ rdpmouseControl(DeviceIntPtr device, int what)
             map[6] = 6;
             map[7] = 7;
             map[8] = 8;
+            map[9] = 9;
 
             btn_labels[0] = XIGetKnownProperty(BTN_LABEL_PROP_BTN_LEFT);
             btn_labels[1] = XIGetKnownProperty(BTN_LABEL_PROP_BTN_MIDDLE);
