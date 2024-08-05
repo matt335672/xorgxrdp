@@ -61,7 +61,7 @@ jobs:
             name_extra: 32-bit build
 
     name: ${{ matrix.name_extra }} (${{ matrix.CC }})
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     env:
       CC: ${{ matrix.CC }}
       CFLAGS: ${{matrix.CFLAGS }}
