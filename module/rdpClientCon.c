@@ -120,6 +120,7 @@ static int
 rdpClientConAddEnabledDevice(ScreenPtr pScreen, int fd)
 {
     AddEnabledDevice(fd);
+    zzz;
     return 0;
 }
 
