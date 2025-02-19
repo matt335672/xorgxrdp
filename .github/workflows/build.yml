@@ -88,9 +88,10 @@ jobs:
       CC: gcc
       CONF_FLAGS: --enable-glamor
       XRDP_CFLAGS: -I${{ github.workspace }}/xrdp/common
-      # Use a PKG_CONFIG_PATH to pick up the pkg-config file for
-      # Xorg
+      # Use a PKG_CONFIG_PATH to pick up the pkg-config file for Xorg
       PKG_CONFIG_PATH: ${{ github.workspace }}/xorg-build/lib/pkgconfig
+      # This is used for the tests
+      XORG: ${{ github.workspace }}/xorg-build/bin/Xorg
 
     steps:
       # Set steps.os.outputs.image to the specific OS (e.g. 'ubuntu24')
