@@ -3377,3 +3377,4 @@ rdpClientConAddAllBox(rdpPtr dev, BoxPtr box, DrawablePtr pDrawable)
     }
     return 0;
 }
+/* Provoke a CI rebuild */
